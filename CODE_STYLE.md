@@ -59,15 +59,8 @@ We're not TOO picky here, but a few guidelines:
   to maintain. Break it up into smaller chunks.
 - Write small methods, don't write big behemoths. Method names are some of the
   BEST documentation, and they encourage good, isolated code.
-- We are using [DBT][] to manage file dependencies, with the explicit
-  `MotionKit::` prefix:
-  ```ruby
-  # @provides MotionKit::Foo
-  # @requires MotionKit::BaseFoo
-  module MotionKit
-    class Foo < BaseFoo
-    # ...
-  ```
+- We are using RubyMotion's built-in system to manage file dependencies, 
+  so you don't have to specify dependencies in each file.
 
 ### Comments
 

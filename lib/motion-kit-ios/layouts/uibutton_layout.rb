@@ -1,5 +1,3 @@
-# @provides MotionKit::UIButtonLayout
-# @requires MotionKit::UIViewLayout
 module MotionKit
   class UIButtonLayout < UIViewLayout
     targets UIButton

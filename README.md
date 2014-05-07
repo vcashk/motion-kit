@@ -1,5 +1,7 @@
 # MotionKit
 
+[![Build Status](https://travis-ci.org/rubymotion/motion-kit.svg?branch=master)](https://travis-ci.org/rubymotion/motion-kit)
+
 *The RubyMotion layout and styling gem.*
 
 1. Crossplatform compatibility: iOS, OSX

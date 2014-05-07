@@ -21,5 +21,4 @@ DESC
 
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'dbt'
 end

@@ -1,4 +1,3 @@
-# @provides MotionKit::Parent
 module MotionKit
   # Simple class that returns data about the parent element
   # for use while setting the styles of a child element.

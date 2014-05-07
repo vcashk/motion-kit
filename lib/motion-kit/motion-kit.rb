@@ -1,4 +1,3 @@
-# @provides MotionKit::Error
 module MotionKit
   class NoContextError < Exception
   end

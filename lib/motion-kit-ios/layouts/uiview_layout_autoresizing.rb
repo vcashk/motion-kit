@@ -1,4 +1,3 @@
-# @requires MotionKit::UIViewLayout
 module MotionKit
   class UIViewLayout
 

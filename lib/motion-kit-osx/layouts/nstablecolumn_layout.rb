@@ -1,5 +1,3 @@
-# @provides MotionKit::NSTableColumnLayout
-# @requires MotionKit::BaseLayout
 module MotionKit
   class NSTableColumnLayout < BaseLayout
     targets NSTableColumn

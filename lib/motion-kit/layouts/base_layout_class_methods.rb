@@ -1,4 +1,3 @@
-# @provides MotionKit::BaseLayoutClassMethods
 module MotionKit
   module BaseLayoutClassMethods
     def target_klasses

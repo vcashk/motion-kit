@@ -3,8 +3,6 @@ unless defined?(Motion::Project::Config)
 end
 
 
-require 'dbt'
-
 Motion::Project::App.setup do |app|
   core_lib = File.join(File.dirname(__FILE__), 'motion-kit')
   cocoa_lib = File.join(File.dirname(__FILE__), 'motion-kit-cocoa')
@@ -28,6 +26,4 @@ Motion::Project::App.setup do |app|
   Dir.glob(File.join(core_lib, '**/*.rb')).reverse.each do |file|
     app.files.insert(insert_point, file)
   end
-
-  DBT.analyze(app)
 end

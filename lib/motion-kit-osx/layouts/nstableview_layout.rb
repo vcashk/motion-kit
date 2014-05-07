@@ -1,5 +1,3 @@
-# @provides MotionKit::NSTableViewLayout
-# @requires MotionKit::NSViewLayout
 module MotionKit
   class NSTableViewLayout < NSViewLayout
     targets NSTableView

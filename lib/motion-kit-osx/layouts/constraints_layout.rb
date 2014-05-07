@@ -1,4 +1,3 @@
-# @requires MotionKit::ConstraintsLayout
 module MotionKit
   class ConstraintsLayout
 

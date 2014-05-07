@@ -1,6 +1,3 @@
-# @provides MotionKit::Layout
-# @provides MotionKit::NSViewLayout
-# @requires MotionKit::ViewLayout
 module MotionKit
   class Layout < ViewLayout
 

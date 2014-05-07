@@ -1,6 +1,3 @@
-# @provides MotionKit::ConstraintsLayout
-# @requires MotionKit::BaseLayout
-# @requires MotionKit::ConstraintsTarget
 module MotionKit
   class ConstraintsLayout < BaseLayout
     targets ConstraintsTarget

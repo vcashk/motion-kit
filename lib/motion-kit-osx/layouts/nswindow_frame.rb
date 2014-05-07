@@ -1,4 +1,3 @@
-# @requires MotionKit::NSWindowLayout
 module MotionKit
   class NSWindowLayout
 

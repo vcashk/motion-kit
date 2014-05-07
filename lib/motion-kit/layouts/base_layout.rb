@@ -1,5 +1,3 @@
-# @provides MotionKit::BaseLayout
-# @requires MotionKit::BaseLayoutClassMethods
 module MotionKit
   # Abstract base class, responsible for "registration" of layout classes with
   # the class `targets` method.
@@ -12,7 +10,7 @@ module MotionKit
   # removing views to a view hierarchy.
   class BaseLayout
     # Class methods reside in base_layout_class_methods.rb
-    extend BaseLayoutClassMethods
+    extend MotionKit::BaseLayoutClassMethods
 
     attr :parent
 

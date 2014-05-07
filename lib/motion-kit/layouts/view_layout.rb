@@ -1,5 +1,3 @@
-# @provides MotionKit::ViewLayout
-# @requires MotionKit::BaseLayout
 module MotionKit
   # A sensible parent class for any View-like layout class. Platform agnostic.
   # Any platform-specific tasks are offloaded to child views (add_child,

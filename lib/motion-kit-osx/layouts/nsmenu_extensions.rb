@@ -1,4 +1,3 @@
-# @requires MotionKit::NSMenuLayout
 module MotionKit
   class NSMenuLayout
 

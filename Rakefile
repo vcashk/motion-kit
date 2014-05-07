@@ -18,6 +18,7 @@ end
 Motion::Project::App.setup do |app|
   app.name = 'MotionKit'
   app.identifier = 'com.motionkit.MotionKit'
+  app.detect_dependencies = true
 
   if app.template == :ios
     app.specs_dir = 'spec/ios/'
@@ -26,6 +27,4 @@ Motion::Project::App.setup do |app|
     app.specs_dir = 'spec/osx/'
     app.files.delete_if { |file| file =~ %r{app/ios/} }
   end
-
-  DBT.analyze(app)
 end

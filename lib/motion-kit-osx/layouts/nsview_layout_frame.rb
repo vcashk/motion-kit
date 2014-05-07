@@ -1,4 +1,3 @@
-# @requires MotionKit::NSViewLayout
 module MotionKit
   class NSViewLayout
     override_start
