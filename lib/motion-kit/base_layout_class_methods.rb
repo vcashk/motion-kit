@@ -1,4 +1,4 @@
-# module MotionKit
+module MotionKit
   module BaseLayoutClassMethods
     def target_klasses
       # We don't want subclasses, just BaseLayout
@@ -39,4 +39,4 @@
       child
     end
   end
-# end
+end
