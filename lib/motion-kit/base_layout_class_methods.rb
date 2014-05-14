@@ -2,15 +2,15 @@
   module BaseLayoutClassMethods
     def target_klasses
       # We don't want subclasses, just BaseLayout
-      return MotionKit::BaseLayout.target_klasses unless self == MotionKit::BaseLayout
+      return self.base_klass.target_klasses unless self == self.base_klass
       @target_klasses ||= {}
     end
 
     def targets(klass=nil)
-      return nil if klass.nil? && self == MotionKit::BaseLayout
+      return nil if klass.nil? && self == self.base_klass
       return @targets || superclass.targets if klass.nil?
       @targets = klass
-      MotionKit::BaseLayout.target_klasses[klass] = self
+      self.base_klass.target_klasses[klass] = self
       nil
     end
 

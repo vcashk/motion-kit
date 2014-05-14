@@ -106,7 +106,7 @@ module MotionKit
       if f.is_a?(Hash)
         f = f.merge(relative: true)
       end
-      f = MotionKit.calculate(calculate_view, :frame, f, from_view)
+      f = MotionKit.calculate(calculate_view, :frame, f, target.superview)
       f.origin.x += o.x
       f.origin.y += o.y
 
@@ -271,18 +271,27 @@ module MotionKit
 
     # The first arg can be a view or a frame
     # @example
+    #   frame above(view, [[0, 0], [100, 20]])
+    #   frame above(:view, x: 0, y: 0, width: 100, height: 20)
+    #   frame above(:view, down: 0, right: 0, width: 100, height: 20)
     def above(from_view, f={})
       _calculate_frame(f, from: from_view, relative_to: { x: :reset, y: :above })
     end
 
     # The first arg can be a view or a frame
     # @example
+    #   frame below(view, [[0, 0], [100, 20]])
+    #   frame below(:view, x: 0, y: 0, width: 100, height: 20)
+    #   frame below(:view, down: 0, right: 0, width: 100, height: 20)
     def below(from_view, f={})
       _calculate_frame(f, from: from_view, relative_to: { x: :reset, y: :below })
     end
 
     # The first arg can be a view or a frame
     # @example
+    #   frame before(view, [[0, 0], [100, 20]])
+    #   frame before(:view, x: 0, y: 0, width: 100, height: 20)
+    #   frame before(:view, down: 0, right: 0, width: 100, height: 20)
     def before(from_view, f={})
       _calculate_frame(f, from: from_view, relative_to: { x: :before, y: :reset })
     end
@@ -290,6 +299,9 @@ module MotionKit
 
     # The first arg can be a view or a frame
     # @example
+    #   frame after(view, [[0, 0], [100, 20]])
+    #   frame after(:view, x: 0, y: 0, width: 100, height: 20)
+    #   frame after(:view, down: 0, right: 0, width: 100, height: 20)
     def after(from_view, f={})
       _calculate_frame(f, from: from_view, relative_to: { x: :after, y: :reset })
     end
@@ -297,6 +309,9 @@ module MotionKit
 
     # The first arg must be a view
     # @example
+    #   frame relative_to(view, [[0, 0], [100, 20]])
+    #   frame relative_to(:view, x: 0, y: 0, width: 100, height: 20)
+    #   frame relative_to(:view, down: 0, right: 0, width: 100, height: 20)
     def relative_to(from_view, f)
       _calculate_frame(f, from: from_view, relative_to: { x: :reset, y: :reset })
     end

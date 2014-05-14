@@ -33,9 +33,9 @@ module MotionKit
 
       return case dimension
       when :width
-        return (view.superview.frame.size.width * factor + constant).round
+        return (full_view.frame.size.width * factor + constant).round
       when :height
-        return (view.superview.frame.size.height * factor + constant).round
+        return (full_view.frame.size.height * factor + constant).round
       else
         raise "Unknown dimension #{dimension}"
       end
@@ -56,7 +56,7 @@ module MotionKit
       y_offset = 0
 
       if amount.is_a?(Hash)
-        if amount.fetch(:relative, false)
+        if amount[:relative]
           if amount.key?(:x)
             x = amount[:x]
           else
@@ -90,7 +90,7 @@ module MotionKit
         else
           if amount.key?(:right)
             x_offset = -my_size.width
-            x = amount.fetch(:right, view.frame.origin.x)
+            x = amount[:right]
           elsif amount.key?(:x) || amount.key?(:left)
             x = amount[:x] || amount[:left]
           elsif dimension == :center
@@ -102,7 +102,7 @@ module MotionKit
 
           if amount.key?(:bottom)
             y_offset = -my_size.height
-            y = amount.fetch(:bottom, view.frame.origin.y)
+            y = amount[:bottom]
           elsif amount.key?(:y) || amount.key?(:top)
             y = amount[:y] || amount[:top]
           elsif dimension == :center
